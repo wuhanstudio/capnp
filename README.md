@@ -2,6 +2,8 @@
 
 ![](https://capnproto.org/images/logo.png)
 
+
+
 ### Protobuf
 
 为了更高效地存储数据，可以利用 Google 的 protobuf 定义二进制数据格式，例如下面的 proto 定义了一种二进制的文件格式，并且可以自动生成解析二进制文件的源码，现在支持十多种语言。
@@ -24,6 +26,12 @@ message AMessage {
 同样的道理，capnp 也是为了更加高效地存储数据，但是相比 Google 的 protobuf 更加高效，更加轻量级。
 
 ![capnp](https://capnproto.org/images/infinity-times-faster.png)
+
+首先需要安装 capnp 工具用来编译自己的 proto，安装文档在下面的链接里。
+
+```
+https://capnproto.org/install.html
+```
 
 capnp 也支持很多种不同的编程语言，如果想生成 C 源码的话，和 protobuf 一样，可以先安装插件。
 
@@ -82,7 +90,7 @@ struct AddressBook {
 capnp compile -o ./capnpc-c myschema.capnp
 ```
 
-关于解析的例程可以查看 examples 目录。
+关于解析的例程可以查看 examples 目录，熟悉 protobuf 的话会发现用起来非常顺手。
 
 
 
