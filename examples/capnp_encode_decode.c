@@ -119,11 +119,13 @@ void capnp_encode_decode_entry(void* parameters)
     capn_free(&rc);
   }
   printf("\n");
+
+  printf("\n");
 }
 
 static void capnp_encode_decode(int argc,char *argv[])
 {
-    rt_thread_t thread = rt_thread_create("capnp", capnp_encode_decode_entry, RT_NULL, 8192, 25, 10);
+    rt_thread_t thread = rt_thread_create("capnp", capnp_encode_decode_entry, RT_NULL, 10240, 25, 10);
     if(thread != RT_NULL)
     {
         rt_thread_startup(thread);
@@ -135,4 +137,3 @@ static void capnp_encode_decode(int argc,char *argv[])
     }
 }
 MSH_CMD_EXPORT(capnp_encode_decode, capnp encode decode example)
-
