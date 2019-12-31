@@ -69,15 +69,6 @@ void capnp_encode_decode_entry(void* parameters)
   }
   printf("\n");
 
-  // printf("--- Write to File ---\n");
-  // {
-  //   // Write serialized object to file system.
-  //   FILE *f = fopen("./person.bin", "wb");
-  //   fwrite(buf, 1 /* size */, sz /* count */, f);
-  //   fclose(f);
-  // }
-  // printf("\n");
-
   printf("--- Decoding ---\n");
   {
     struct capn rc;
@@ -144,3 +135,4 @@ static void capnp_encode_decode(int argc,char *argv[])
     }
 }
 MSH_CMD_EXPORT(capnp_encode_decode, capnp encode decode example)
+
